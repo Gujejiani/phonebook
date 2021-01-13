@@ -1,0 +1,23 @@
+.FormInput {
+  position: relative;
+  margin-bottom: 10px;
+}
+.FormInput label {
+  position: absolute;
+  left: -80px;
+}
+
+.Btn {
+  width: 150px;
+  height: 30px;
+  background-color: #16bebe;
+  outline: none;
+  border: 1px solid #457a7a;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.Btn:active {
+  background-color: rgb(9, 175, 216);
+}
