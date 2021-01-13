@@ -21,3 +21,6 @@
 .Btn:active {
   background-color: rgb(9, 175, 216);
 }
+.disabled {
+  background-color: #457a7a;
+}

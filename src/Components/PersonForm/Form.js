@@ -21,7 +21,11 @@ const personForm = (props) => {
       </div>
 
       <div>
-        <button className="Btn" type="submit">
+        <button
+          disabled={props.disabled}
+          className={props.disabled ? "Btn disabled" : `Btn`}
+          type="submit"
+        >
           add Contact
         </button>
       </div>

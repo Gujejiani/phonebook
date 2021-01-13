@@ -12,6 +12,14 @@ ul {
   list-style: none;
   text-align: left;
 }
+ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+ul li button {
+  position: absolute;
+  right: -80px;
+}
 .FlexColumn {
   display: flex;
   flex-direction: column;
@@ -25,4 +33,15 @@ input {
 }
 input:focus {
   outline: 1px solid #231f5a;
+}
+.delete {
+  background-color: #db3434;
+  border: 1px solid aquamarine;
+  border-radius: 4px;
+  color: rgb(211, 202, 202);
+  outline: none;
+  cursor: pointer;
+}
+.delete:active {
+  outline: 1px solid #f2f2f2;
 }

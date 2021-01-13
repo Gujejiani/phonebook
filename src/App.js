@@ -56,6 +56,13 @@ const App = () => {
     }
   };
 
+  const deleteHandler = (name) => {
+    // console.log(e.target.closest("li").value);
+    const personsUpdated = persons.filter((p) => p.name !== name);
+
+    setPersons(personsUpdated);
+  };
+
   return (
     <div className="App">
       <h2>Phonebook</h2>
@@ -63,6 +70,7 @@ const App = () => {
       <Filter filterHandler={filterHandler} />
       <h3>add a new contact</h3>
       <PersonForm
+        disabled={newName && newNumber ? false : true}
         submit={submitHandler}
         nameInputVal={newName}
         numInputVal={newNumber}
@@ -71,7 +79,7 @@ const App = () => {
       />
       <h2>Numbers</h2>
 
-      <Persons searched={searchedResults} />
+      <Persons delete={deleteHandler} searched={searchedResults} />
     </div>
   );
 };

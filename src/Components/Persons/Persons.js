@@ -1,16 +1,22 @@
 const Persons = (props) => {
   return (
     <div>
-      {props.searched.map((person) => {
-        return (
-          <ul key={person.name}>
-            <li>
+      <ul>
+        {props.searched.map((person) => {
+          return (
+            <li key={person.name}>
               {" "}
-              {person.name} {person.number}
+              {person.name} {person.number}{" "}
+              <button
+                onClick={() => props.delete(person.name)}
+                className="delete"
+              >
+                delete
+              </button>
             </li>
-          </ul>
-        );
-      })}
+          );
+        })}
+      </ul>
     </div>
   );
 };
